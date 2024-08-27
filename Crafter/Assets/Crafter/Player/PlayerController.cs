@@ -1,4 +1,3 @@
-using System;
 using Zenject;
 using DG.Tweening;
 using UnityEngine;
@@ -59,12 +58,12 @@ namespace Crafter.Player
 
         private void OnTriggerEnter(Collider p_other)
         {
-            Debug.Log(p_other.name);
+            
         }
         
         private void OnTriggerExit(Collider p_other)
         {
-            Debug.Log(p_other.name);
+            
         }
 
         private void OnAnimatorMove()
@@ -105,7 +104,6 @@ namespace Crafter.Player
         
         private void RotateCamera(InputAction.CallbackContext p_ctx)
         {
-            Debug.Log($"Pad {_inputMgr.PadControl}");
             if (!_inputMgr.PadControl && !_rmb)
             {
                 _cameraRotationAxis = Vector2.zero;
