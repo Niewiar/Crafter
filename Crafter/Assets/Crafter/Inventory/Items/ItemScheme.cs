@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.Localization;
 using System.Collections.Generic;
 
-namespace Crafter.Interactable.Item
+namespace Crafter.Inventory.Item
 {
     public class ItemScheme : ScriptableObject
     {
@@ -13,12 +13,11 @@ namespace Crafter.Interactable.Item
         [BoxGroup("Base Data")] public LocalizedString Dsc;
         [PreviewField, BoxGroup("Base Data")] public Sprite ICO;
         [BoxGroup("Base Data")] public Color ICOColor = Color.white;
-        [PreviewField, BoxGroup("Base Data")] public SceneItem ScenePrefab;
+        [BoxGroup("Base Data")] public SceneItem ScenePrefab;
         [Range(1, 100), BoxGroup("Base Data")] public uint MaxStackAmount = 10;
         
         [BoxGroup("Crafting")] public List<ItemStack> ItemsToCraft;
         [BoxGroup("Crafting"), Range(1, 100), ShowIf("@ItemsToCraft.Count>0")] public int CraftChance = 1;
-        [BoxGroup("Crafting"), Range(1, 100), ShowIf("@ItemsToCraft.Count>0")] public uint ReturnQuality = 50;
     }
 
     [Serializable]

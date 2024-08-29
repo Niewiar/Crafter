@@ -1,9 +1,9 @@
 {
-    "name": "InventoryAssembly",
+    "name": "CraftingAssembly",
     "rootNamespace": "",
     "references": [
-        "GUID:cfd2564817a9c6c4584f6cf38a6afe09",
-        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5"
+        "GUID:ece4e977385a783469dedbbc9c88bc9a",
+        "GUID:cfd2564817a9c6c4584f6cf38a6afe09"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,9 +1,7 @@
 {
     "name": "InteractiveAssembly",
     "rootNamespace": "",
-    "references": [
-        "Unity.Localization"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

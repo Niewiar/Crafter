@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Crafter.Interactable.Item
+namespace Crafter.Inventory.Item.Editor
 {
     public class ItemsDatabaseEditor : EditorWindow
     {
@@ -15,7 +15,7 @@ namespace Crafter.Interactable.Item
         private VisualElement _content;
         private VisualTreeAsset _itemButtonsRef;
         
-        private Editor _currentEdit;
+        private UnityEditor.Editor _currentEdit;
 
         [MenuItem("Crafter/Items Database")]
         private static void CreateWindow()
@@ -43,11 +43,11 @@ namespace Crafter.Interactable.Item
             
             VisualTreeAsset vt = 
                 AssetDatabase.LoadAssetAtPath<VisualTreeAsset>
-                    ("Assets/Crafter/Interactable/Items/Editor/ItemsDatabaseVisualTree.uxml");
+                    ("Assets/Crafter/Inventory/Items/Editor/ItemsDatabaseVisualTree.uxml");
             vt.CloneTree(rootVisualElement);
             
             _itemButtonsRef = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>
-                ("Assets/Crafter/Interactable/Items/Editor/ItemButtonsVisualTree.uxml");
+                ("Assets/Crafter/Inventory/Items/Editor/ItemButtonsVisualTree.uxml");
 
             _scrollView = rootVisualElement.Q<ScrollView>("ScrollView");
             _content = rootVisualElement.Q<VisualElement>("content");
@@ -107,7 +107,7 @@ namespace Crafter.Interactable.Item
         {
             _content.Clear();
             DestroyImmediate(_currentEdit);
-            _currentEdit = Editor.CreateEditor(p_scheme);
+            _currentEdit = UnityEditor.Editor.CreateEditor(p_scheme);
             IMGUIContainer inspector = new IMGUIContainer();
             inspector.onGUIHandler += delegate
             {

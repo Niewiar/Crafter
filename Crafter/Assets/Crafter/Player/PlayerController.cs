@@ -11,7 +11,7 @@ namespace Crafter.Player
     using Input;
     using Inventory;
     using Interactable;
-    using Interactable.Item;
+    using Inventory.Item;
 
     [RequireComponent(typeof(Animator), typeof(InventoryController))]
     public class PlayerController : MonoBehaviour
@@ -69,7 +69,7 @@ namespace Crafter.Player
         private void OnTriggerEnter(Collider p_other)
         {
             InteractableObject interactableObject = p_other.GetComponent<InteractableObject>();
-            if (interactableObject != null)
+            if (interactableObject != null && !_possibleInteractions.Contains(interactableObject))
             {
                 _possibleInteractions.Add(interactableObject);
             }
@@ -131,9 +131,15 @@ namespace Crafter.Player
             _cameraRotationAxis = p_ctx.ReadValue<Vector2>().normalized;
         }
 
-        //TODO 
+        //TODO better interaction system
         private void Interact(InputAction.CallbackContext p_ctx)
         {
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("PickUp"))
+            {
+                return;
+            }
+
+            Debug.Log("I");
             _animator.SetTrigger("PickUp");
             InteractableObject obj = _possibleInteractions.
                 OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).FirstOrDefault();

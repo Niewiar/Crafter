@@ -1,11 +1,13 @@
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-namespace Crafter.Interactable.Item
+namespace Crafter.Inventory.Item
 {
+    using Interactable;
+    
     public class SceneItem : InteractableObject
     {
-        public ItemStack ItemData = new();
+        [HideLabel] public ItemStack ItemData = new();
         
         public override void Interact()
         {

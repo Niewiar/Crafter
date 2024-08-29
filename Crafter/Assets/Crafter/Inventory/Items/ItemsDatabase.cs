@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Crafter.Interactable.Item
+namespace Crafter.Inventory.Item
 {
     public class ItemsDatabase : ScriptableObject
     {
