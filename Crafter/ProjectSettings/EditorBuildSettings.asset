@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Crafter/Scenes/Gameplay.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 1e0e1358b3aabd34085f7465fae52b69,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: f21e5a8f372c0ae48b9e313938e76934,
+      type: 2}

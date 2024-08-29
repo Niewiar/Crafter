@@ -1,0 +1,328 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7642216382721380757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dafdadfe9afd540ae2443f18fc16ff, type: 3}
+  m_Name: Item 3
+  m_EditorClassIdentifier: 
+  ID: 3
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:89c44cde3963bd2498cdba74f641db94
+    m_TableEntryReference:
+      m_KeyId: 63446451216386
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Dsc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ICO: {fileID: 21300000, guid: 4dc7a6ad46cf7c4439b18d234f6de2ad, type: 3}
+  ICOColor: {r: 0.3977394, g: 0.7735849, b: 0.76155907, a: 1}
+  ScenePrefab: {fileID: 2982986295635619593, guid: 198455c8728da564c9ec9e49ad45a618,
+    type: 3}
+  MaxStackAmount: 10
+  ItemsToCraft: []
+  CraftChance: 1
+  ReturnQuality: 50
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &-6215208864053726406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dafdadfe9afd540ae2443f18fc16ff, type: 3}
+  m_Name: Item 4
+  m_EditorClassIdentifier: 
+  ID: 4
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:89c44cde3963bd2498cdba74f641db94
+    m_TableEntryReference:
+      m_KeyId: 63446451216387
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Dsc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ICO: {fileID: 21300000, guid: c8160b90248e73f419e2661c0eeb5802, type: 3}
+  ICOColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+  ScenePrefab: {fileID: 2564570118425396318, guid: bd028eb8227652a4ea7f740847be467d,
+    type: 3}
+  MaxStackAmount: 10
+  ItemsToCraft:
+  - ItemID: 3
+    Stack: 2
+  CraftChance: 60
+  ReturnQuality: 50
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &-6094272896918849768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dafdadfe9afd540ae2443f18fc16ff, type: 3}
+  m_Name: Item 0
+  m_EditorClassIdentifier: 
+  ID: 0
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:89c44cde3963bd2498cdba74f641db94
+    m_TableEntryReference:
+      m_KeyId: 63446413467648
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Dsc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ICO: {fileID: 21300000, guid: 245425ac110b31347b1ef788e69e6acd, type: 3}
+  ICOColor: {r: 0.6603774, g: 0.23995264, b: 0, a: 1}
+  ScenePrefab: {fileID: 5516666427225295759, guid: e517d65cf6c2bac468cfc525811a3ed2,
+    type: 3}
+  MaxStackAmount: 10
+  ItemsToCraft: []
+  CraftChance: 1
+  ReturnQuality: 50
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &-1093854735608028696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dafdadfe9afd540ae2443f18fc16ff, type: 3}
+  m_Name: Item 5
+  m_EditorClassIdentifier: 
+  ID: 5
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:89c44cde3963bd2498cdba74f641db94
+    m_TableEntryReference:
+      m_KeyId: 63446451216388
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Dsc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ICO: {fileID: 21300000, guid: 8e2e15b921a1a634eab1264f18462fc8, type: 3}
+  ICOColor: {r: 0.509434, g: 0.26009253, b: 0, a: 1}
+  ScenePrefab: {fileID: 7998305454441501939, guid: aedcc38c793f92c4daaea1ee7087c430,
+    type: 3}
+  MaxStackAmount: 10
+  ItemsToCraft:
+  - ItemID: 1
+    Stack: 1
+  - ItemID: 4
+    Stack: 5
+  CraftChance: 20
+  ReturnQuality: 50
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aecdd31e9f584a74883ef0153b5c77dc, type: 3}
+  m_Name: Items_Database
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: -6094272896918849768}
+  - {fileID: 947489257620473510}
+  - {fileID: 67920758984197263}
+  - {fileID: -7642216382721380757}
+  - {fileID: -6215208864053726406}
+  - {fileID: -1093854735608028696}
+  - {fileID: 2583175930088008586}
+--- !u!114 &67920758984197263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dafdadfe9afd540ae2443f18fc16ff, type: 3}
+  m_Name: Item 2
+  m_EditorClassIdentifier: 
+  ID: 2
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:89c44cde3963bd2498cdba74f641db94
+    m_TableEntryReference:
+      m_KeyId: 63446451216385
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Dsc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ICO: {fileID: 21300000, guid: 4dc7a6ad46cf7c4439b18d234f6de2ad, type: 3}
+  ICOColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+  ScenePrefab: {fileID: 1380890011645060520, guid: e15fb596502f45f49ab02172c4946712,
+    type: 3}
+  MaxStackAmount: 10
+  ItemsToCraft: []
+  CraftChance: 1
+  ReturnQuality: 50
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &947489257620473510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dafdadfe9afd540ae2443f18fc16ff, type: 3}
+  m_Name: Item 1
+  m_EditorClassIdentifier: 
+  ID: 1
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:89c44cde3963bd2498cdba74f641db94
+    m_TableEntryReference:
+      m_KeyId: 63446451216384
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Dsc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ICO: {fileID: 21300000, guid: 2123be1d2692878438169be351ab53ba, type: 3}
+  ICOColor: {r: 0.4528302, g: 0.22210243, b: 0, a: 1}
+  ScenePrefab: {fileID: 3800460457308576696, guid: 7f1749cdcc3f3a046ba97bd1025f4fd6,
+    type: 3}
+  MaxStackAmount: 10
+  ItemsToCraft:
+  - ItemID: 0
+    Stack: 2
+  CraftChance: 100
+  ReturnQuality: 50
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &2583175930088008586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dafdadfe9afd540ae2443f18fc16ff, type: 3}
+  m_Name: Item 6
+  m_EditorClassIdentifier: 
+  ID: 6
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:89c44cde3963bd2498cdba74f641db94
+    m_TableEntryReference:
+      m_KeyId: 63446451216389
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Dsc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  ICO: {fileID: 21300000, guid: 0229f29b15cd4714f902628e86cccf1b, type: 3}
+  ICOColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+  ScenePrefab: {fileID: 2620020514402261214, guid: 8012d67cbaa45f44b9cbeb57c9662905,
+    type: 3}
+  MaxStackAmount: 10
+  ItemsToCraft:
+  - ItemID: 1
+    Stack: 1
+  - ItemID: 2
+    Stack: 1
+  CraftChance: 80
+  ReturnQuality: 50
+  references:
+    version: 2
+    RefIds: []

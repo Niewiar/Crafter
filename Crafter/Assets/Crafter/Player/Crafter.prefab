@@ -126,8 +126,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1356473152320099479}
   - component: {fileID: 1356473152329366301}
-  - component: {fileID: 2131012407206012900}
   - component: {fileID: 7965263063330959105}
+  - component: {fileID: 2131012407206012900}
+  - component: {fileID: 2716197059021710904}
+  - component: {fileID: 3922666792052723894}
   m_Layer: 0
   m_Name: Crafter
   m_TagString: Untagged
@@ -175,22 +177,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2131012407206012900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356473152319998327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d8483fa784ea1b4e9ea679be646acae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lookAtObj: {fileID: 5141574975184102798}
-  _cameraRotationSpeed: 3
-  _moveTransitionSpeed: 0.3
-  _rotationSpeed: 30
 --- !u!65 &7965263063330959105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -212,6 +198,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0.5}
+--- !u!114 &2131012407206012900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356473152319998327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8483fa784ea1b4e9ea679be646acae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lookAtObj: {fileID: 5141574975184102798}
+  _cameraRotationSpeed: 5
+  _moveTransitionSpeed: 0.3
+  _rotationSpeed: 50
+--- !u!114 &2716197059021710904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356473152319998327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fc063bc0234522aef3a1c61585b66b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemsDatabase: {fileID: 11400000, guid: 6a98f5bd01e73e740be2e8fe9f735946, type: 2}
+  _numberOfSlots: 30
+--- !u!114 &3922666792052723894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356473152319998327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc91b4b637b74b8abda2ddd5e1c255ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destinationInventory: {fileID: 2716197059021710904}
+  _resourcesInventories:
+  - {fileID: 2716197059021710904}
 --- !u!1 &1706393941270131502
 GameObject:
   m_ObjectHideFlags: 0

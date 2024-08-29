@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Gameplay_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: df49e66742df3af49826b1612eb052ca, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 173055926272
+    m_Localized: Drop one
+    m_Metadata:
+      m_Items: []
+  - m_Id: 173097869312
+    m_Localized: Drop all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 173102063616
+    m_Localized: Inventory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 173102063617
+    m_Localized: Crafting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27476674732032
+    m_Localized: Craft chance
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

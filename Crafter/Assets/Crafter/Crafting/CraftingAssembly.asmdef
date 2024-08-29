@@ -1,0 +1,17 @@
+{
+    "name": "CraftingAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ece4e977385a783469dedbbc9c88bc9a",
+        "GUID:cfd2564817a9c6c4584f6cf38a6afe09"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

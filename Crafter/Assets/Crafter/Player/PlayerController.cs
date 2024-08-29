@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Zenject;
 using DG.Tweening;
 using UnityEngine;
@@ -7,8 +9,11 @@ using UnityEngine.InputSystem;
 namespace Crafter.Player
 {
     using Input;
+    using Inventory;
+    using Interactable;
+    using Inventory.Item;
 
-    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(Animator), typeof(InventoryController))]
     public class PlayerController : MonoBehaviour
     {
         [SerializeField, BoxGroup("Camera")] private Transform _lookAtObj;
@@ -27,10 +32,15 @@ namespace Crafter.Player
         private bool _rmb;
         private Vector2 _cameraRotationAxis;
 
+        private InventoryController _inventory;
+
+        private readonly List<InteractableObject> _possibleInteractions = new();
+
         [Inject]
         public void Inject(IInputMgr p_inputMgr)
         {
             _animator = GetComponent<Animator>();
+            _inventory = GetComponent<InventoryController>();
             
             _inputMgr = p_inputMgr;
 
@@ -58,12 +68,20 @@ namespace Crafter.Player
 
         private void OnTriggerEnter(Collider p_other)
         {
-            
+            InteractableObject interactableObject = p_other.GetComponent<InteractableObject>();
+            if (interactableObject != null && !_possibleInteractions.Contains(interactableObject))
+            {
+                _possibleInteractions.Add(interactableObject);
+            }
         }
         
         private void OnTriggerExit(Collider p_other)
         {
-            
+            InteractableObject interactableObject = p_other.GetComponent<InteractableObject>();
+            if (interactableObject != null)
+            {
+                _possibleInteractions.Remove(interactableObject);
+            }
         }
 
         private void OnAnimatorMove()
@@ -113,9 +131,39 @@ namespace Crafter.Player
             _cameraRotationAxis = p_ctx.ReadValue<Vector2>().normalized;
         }
 
+        //TODO better interaction system
         private void Interact(InputAction.CallbackContext p_ctx)
         {
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("PickUp"))
+            {
+                return;
+            }
+
+            Debug.Log("I");
             _animator.SetTrigger("PickUp");
+            InteractableObject obj = _possibleInteractions.
+                OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).FirstOrDefault();
+            if (obj != null)
+            {
+                if (obj is SceneItem item)
+                {
+                    uint returnValue = _inventory.AddItem(item.ItemData.ItemID, item.ItemData.Stack);
+
+                    if (returnValue == 0)
+                    {
+                        _possibleInteractions.Remove(obj);
+                        obj.Interact();
+                    }
+                    else
+                    {
+                        item.ItemData.Stack = returnValue;
+                    }
+                    
+                    return;
+                }
+                
+                obj.Interact();
+            }
         }
 
         private void EnableRMB(InputAction.CallbackContext p_ctx) => _rmb = true;
