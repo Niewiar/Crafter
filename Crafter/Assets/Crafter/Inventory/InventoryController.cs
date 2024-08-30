@@ -35,7 +35,7 @@ namespace Crafter.Inventory
             OnInventoryUpdated?.Invoke();
         }
 
-        public virtual uint AddItem(uint p_itemID, uint p_amount)
+        public uint AddItem(uint p_itemID, uint p_amount)
         {
             ItemScheme scheme = _itemsDatabase.Items.FirstOrDefault(x => x.ID == p_itemID);
 
@@ -89,7 +89,7 @@ namespace Crafter.Inventory
             return amountToAdd;
         }
 
-        public virtual void RemoveItemFromSlot(uint p_slotNumber, uint p_amount)
+        public void RemoveItemFromSlot(uint p_slotNumber, uint p_amount)
         {
             if (p_slotNumber >= Slots.Length || Slots[p_slotNumber] == null)
             {
@@ -107,8 +107,8 @@ namespace Crafter.Inventory
             
             OnInventoryUpdated?.Invoke();
         }
-        
-        public virtual void RemoveItem(uint p_itemID, uint p_amount)
+
+        public void RemoveItem(uint p_itemID, uint p_amount)
         {
             uint valueToRemove = p_amount;
 
