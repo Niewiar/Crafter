@@ -1,4 +1,8 @@
+using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace Crafter.Crafting
 {
@@ -7,8 +11,11 @@ namespace Crafter.Crafting
     
     public class CraftingController : MonoBehaviour
     {
-        [SerializeField] private InventoryController _destinationInventory;
-        [SerializeField] private InventoryController[] _resourcesInventories;
+        [SerializeField, BoxGroup("Base Data")] private InventoryController _destinationInventory;
+        [SerializeField, BoxGroup("Base Data")] private InventoryController[] _resourcesInventories;
+
+        [BoxGroup("Events")] public UnityEvent OnCraftSuccess;
+        [BoxGroup("Events")] public UnityEvent OnCraftFailure;
 
         public void Craft(ItemScheme p_item)
         {
@@ -30,21 +37,11 @@ namespace Crafter.Crafting
             if (random <= p_item.CraftChance)
             {
                 _destinationInventory.AddItem(p_item.ID, 1);
-                DoSuccessBehaviours();
+                OnCraftSuccess?.Invoke();
                 return;
             }
             
-            DoFailureBehaviours();
-        }
-
-        private void DoSuccessBehaviours()
-        {
-            
-        }
-        
-        private void DoFailureBehaviours()
-        {
-            
+            OnCraftFailure?.Invoke();
         }
     }
 }

@@ -3498,6 +3498,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4190900248694179212, guid: fa88cd504b232f64588cc4aecaecdb61,
+        type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+      objectReference: {fileID: 0}
     - target: {fileID: 4563737452145322384, guid: fa88cd504b232f64588cc4aecaecdb61,
         type: 3}
       propertyPath: _playerCrafting
@@ -3551,7 +3556,12 @@ PrefabInstance:
     - target: {fileID: 6687909638500387215, guid: fa88cd504b232f64588cc4aecaecdb61,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0009381246
+      value: -0.0009949123
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761622805619519324, guid: fa88cd504b232f64588cc4aecaecdb61,
+        type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Localization.Components.LocalizeStringEvent, Unity.Localization
       objectReference: {fileID: 0}
     - target: {fileID: 7786707098032478603, guid: fa88cd504b232f64588cc4aecaecdb61,
         type: 3}

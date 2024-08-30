@@ -24,6 +24,7 @@ namespace Crafter.Player
         
         private IInputMgr _inputMgr;
         private Animator _animator;
+        private AnimatorOverrideController _overrideController;
 
         private Vector2 _currentValue;
         private Vector2 _exceptedValue;
@@ -35,11 +36,15 @@ namespace Crafter.Player
         private InventoryController _inventory;
 
         private readonly List<InteractableObject> _possibleInteractions = new();
+        public IEnumerable<InteractableObject> PossibleInteractions => _possibleInteractions;
 
         [Inject]
         public void Inject(IInputMgr p_inputMgr)
         {
             _animator = GetComponent<Animator>();
+            _overrideController = new AnimatorOverrideController(_animator.runtimeAnimatorController);
+            _animator.runtimeAnimatorController = _overrideController;
+            
             _inventory = GetComponent<InventoryController>();
             
             _inputMgr = p_inputMgr;
@@ -50,6 +55,12 @@ namespace Crafter.Player
             _inputMgr.GameControls.Player.RMB.canceled += DisableRMB;
             _inputMgr.GameControls.Player.Interact.performed += Interact;
             _inputMgr.GameControls.Player.Enable();
+        }
+
+        public void PlayAnimation(AnimationClip p_animation)
+        {
+            _overrideController["Action"] = p_animation;
+            _animator.SetTrigger("Action");
         }
 
         private void OnDestroy()
@@ -122,7 +133,7 @@ namespace Crafter.Player
         
         private void RotateCamera(InputAction.CallbackContext p_ctx)
         {
-            if (!_inputMgr.PadControl && !_rmb)
+            if (!_rmb)
             {
                 _cameraRotationAxis = Vector2.zero;
                 return;
@@ -134,12 +145,11 @@ namespace Crafter.Player
         //TODO better interaction system
         private void Interact(InputAction.CallbackContext p_ctx)
         {
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("PickUp"))
+            if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Movement Blend"))
             {
                 return;
             }
-
-            Debug.Log("I");
+            
             _animator.SetTrigger("PickUp");
             InteractableObject obj = _possibleInteractions.
                 OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).FirstOrDefault();
@@ -156,6 +166,7 @@ namespace Crafter.Player
                     }
                     else
                     {
+                        //TODO info inventory full
                         item.ItemData.Stack = returnValue;
                     }
                     

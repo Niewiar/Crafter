@@ -35,6 +35,18 @@ MonoBehaviour:
     m_Key: craft_chance
     m_Metadata:
       m_Items: []
+  - m_Id: 227282193997824
+    m_Key: inut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 230043350458368
+    m_Key: exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 234568908005376
+    m_Key: take
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
